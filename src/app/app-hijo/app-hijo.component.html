@@ -1,0 +1,29 @@
+
+      
+      
+  <div class="d-flex">
+      <p>{{futbolista.nombre}}</p> &nbsp;  &nbsp;
+        <p>{{futbolista.apellido}}</p> &nbsp; &nbsp;
+        <p>{{futbolista.edad}}</p> &nbsp; &nbsp;
+        <p>{{futbolista.precision}}</p> &nbsp; &nbsp;<br>
+
+        
+    </div>    
+    <p>Caracteristicas del futbolista: </p>
+    <p *ngFor="let arr of array">
+        {{arr}}
+    </p>
+
+    <a [routerLink]="['actualizar/',indice+1]  "  [queryParams]="{accion:'1'}" class="btn btn-primary" >Actualizar</a>
+
+    <a [routerLink]="['actualizar/',indice+1]  "  [queryParams]="{accion:'2'}" class="btn btn-primary" >Eliminar</a>
+        
+
+<app-caracteristicas-empleado (añadircaracteristicas)="addCaracter($event)" />
+
+
+
+
+
+
+    
